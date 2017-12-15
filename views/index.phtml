@@ -4,12 +4,12 @@
     </head>
     <body>
         <ul>
-            <?php foreach ($lecturers->getLecturers() as $lecturer): /** @var $lecturer Application\Lecturer */ ?>
+            <?php foreach ($meetings->getMeeting() as $meeting): /** @var $meeting Meeting\Meeting */ ?>
                 <li>
-                    <?= $lecturer->getName() ?>
+                    <?= $meetings->getTitle() ?>
                     <ul>
-                        <?php foreach ($lecturer->getLectures() as $lecture): ?>
-                            <li><?= $lecture ?></li>
+                        <?php foreach ($meeting->getUser() as $user): ?>
+                            <li><?= $user ?></li>
                         <?php endforeach; ?>
                     </ul>
                 </li>

@@ -12,4 +12,4 @@ if (class_exists(Dotenv::class) && file_exists(__DIR__.'/.env')) {
     $dotenv->load(__DIR__.'/.env');
 }
 
-echo (new \Application\Application())->dispatch($_SERVER['REQUEST_URI']);
+echo (new \Meeting\Meeting())->dispatch($_SERVER['REQUEST_URI']);
